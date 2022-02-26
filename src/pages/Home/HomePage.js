@@ -1,13 +1,17 @@
 import React from 'react';
-// import { Menu, Label, Input } from 'semantic-ui-react';
+import { Container, Image } from 'semantic-ui-react';
+import bgImage from '../../images/background.jpg';
+import './HomePage.css';
 
 
 const Home = () => {
     return (
-        <div>
-            <h1>HELLO WORLD</h1> 
-        </div>
-        
+        <Container textAlign='center'>
+            <div className='full-page'>
+                <Image className='full-image' src={bgImage} />
+            </div>
+            <h1>IOA Rentals</h1> 
+        </Container>
     )
 }
 
