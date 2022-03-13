@@ -19,5 +19,4 @@ class PhotoCarousel extends Component {
     }
 };
 
-// ReactDOM.render(<PhotoCarousel />, document.querySelector('.photo-carousel'));
 export default PhotoCarousel

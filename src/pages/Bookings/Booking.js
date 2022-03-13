@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Card, Button, CardContent, CardDescription } from 'semantic-ui-react';
 import Images from './photos';
 import PhotoCarousel from '../../components/Carousel/Carousel';
+import Reserve from '../../components/Reserve/Reserve';
 
 const Booking = () => {
 
@@ -19,8 +20,9 @@ const Booking = () => {
                         3 bedrooms - 4 beds - 1 bath
                     </CardDescription>
                 </Card.Content>
-                <Card.Content  >
-                    <Button color='blue' content='Check Availablity'/>
+                <Card.Content>
+                    <h3 floated='left'>$145/night</h3>
+                    <Reserve floated='right'/>
                 </Card.Content>
             </Card>
         </Container>
