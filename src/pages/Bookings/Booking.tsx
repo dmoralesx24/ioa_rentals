@@ -21,7 +21,7 @@ const Booking = () => {
                     </CardDescription>
                 </Card.Content>
                 <Card.Content>
-                    <h3 floated='left'>$145/night</h3>
+                    <h3>$145/night</h3>
                     <Reserve floated='right'/>
                 </Card.Content>
             </Card>
