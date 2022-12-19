@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container, Grid } from 'semantic-ui-react'
 import Home from './pages/Home/HomePage';
 import Booking from './pages/Bookings/Booking';
+import About from './pages/About/About';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 
@@ -18,6 +19,7 @@ const App = () => {
                             <Grid.Column>
                                 <Routes>
                                     <Route path="/" element={<Home />} />
+                                    <Route path="/about" element={<About />} />
                                     <Route path="/bookings" element={<Booking />} />
                                 </Routes>
                             </Grid.Column>
