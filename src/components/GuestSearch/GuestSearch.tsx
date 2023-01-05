@@ -1,28 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Container, Segment } from "semantic-ui-react";
-import { DateRange } from 'react-date-range';
-import { addDays } from 'date-fns';
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
-
-
-
+import { Container, Segment, Icon } from "semantic-ui-react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import './guestSearch.css';
 
 const GuestSearch: React.FC = () => {
-    // const [state, setState] = useState({
-    //     startDate: new Date(),
-    //     endDate: addDays(new Date(), 7),
-    //     focusedInput: null,
-    //     key: 'selection'
-    // });
-
-    const [state, setState] = useState([
-        {
-        startDate: new Date(),
-        endDate: addDays(new Date(), 7),
-        key: 'selection'
-        }
-    ]);
+    const [dateRange, setDateRange] = useState([null, null]);
+    const [startDate, endDate] = dateRange;
 
     useEffect(() => {
         // handleSubmit();
@@ -46,16 +30,25 @@ const GuestSearch: React.FC = () => {
     //     console.log('created example worked!');
     // }
 
+    //TODO: i need to create a grid within this segment to display everthing on a single row. might need to use my build formComponent.
     return (
         <Container textAlign="center">
-            <Segment color='blue'>
-            {/* <DateRange
-                editableDateInputs={true}
-                onChange={item => setState([item.selection])}
-                moveRangeOnFirstSelection={false}
-                ranges={state}
-            /> */}
-
+            <Segment color='blue'> 
+            <div className='input-icons'>
+                <Icon className='icon' name='calendar alternate'/>
+                <DatePicker
+                    className='input-field'
+                    selectsRange={true}
+                    startDate={startDate}
+                    endDate={endDate}
+                    onChange={(update) => {
+                    setDateRange(update);
+                    }}
+                    isClearable={true}
+                >
+                    <Icon name='calendar alternate'/>
+                </DatePicker>
+            </div>
             </Segment>
         </Container>
     )
